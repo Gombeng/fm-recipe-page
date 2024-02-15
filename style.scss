@@ -1,5 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+$Mobile: 375px;
+$Desktop: 1440px;
+$Nutmeg: hsl(14, 45%, 36%);
+$Dark-Raspberry: hsl(332, 51%, 32%);
+$White: hsl(0, 0%, 100%);
+$Rose-White: hsl(330, 100%, 98%);
+$Eggshell: hsl(30, 54%, 90%);
+$Wenge-Brown: hsl(30, 10%, 34%);
+$Dark-Charcoal: hsl(24, 5%, 18%);
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: $Desktop;
+  background-color: $White;
+  font-family: "Outfit", sans-serif;
+}
+
+header {
+  .header-image {
+    width: 100%;
+  }
+}
+
+h1,
+h2 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  color: $Dark-Charcoal;
+  font-size: 2.3rem;
+  line-height: 1;
+}
+
+h2 {
+  color: $Nutmeg;
+  font-size: 1.75rem;
+}
+
+h3 {
+  color: $Dark-Raspberry;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: $Wenge-Brown;
+  margin-bottom: 1rem;
+}
+
+main > hr {
+  margin: 1.9rem;
+}
+
+hr {
+  opacity: 0.3;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+section {
+  margin: 2rem;
+  .lists {
+    margin-left: 0.5rem;
+  }
+
+  &.ingredients,
+  &.prep-time,
+  &.instructions {
+    .list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1.1rem;
+      color: $Wenge-Brown;
+      margin-bottom: 0.8rem;
+      .no {
+        color: $Dark-Raspberry;
+        font-weight: bold;
+        min-width: 15px;
+      }
+      .dot {
+        min-width: 0.25rem;
+        min-height: 0.25rem;
+        border-radius: 50%;
+        background-color: $Dark-Raspberry;
+      }
+      :nth-child(2) {
+        margin-left: 0.7rem;
+      }
+    }
+  }
+
+  &.prep-time {
+    padding: 1.5rem;
+    background-color: $Rose-White;
+    border-radius: 1rem;
+  }
+
+  &.instructions {
+    .list {
+      align-items: start;
+      :nth-child(2) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &.nutrition {
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      tr {
+        td {
+          padding: 1rem;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        :first-child {
+          color: $Wenge-Brown;
+          padding-left: 2rem;
+        }
+        :last-child {
+          color: $Nutmeg;
+          padding-right: 2.9rem;
+        }
+        &:last-child > td {
+          border-bottom: none;
+        }
+      }
+    }
+  }
 }

@@ -1,5 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.5;
+  max-width: 1440px;
+  background-color: hsl(0, 0%, 100%);
+  font-family: "Outfit", sans-serif;
+}
+
+header .header-image {
+  width: 100%;
+}
+
+h1,
+h2 {
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  color: hsl(24, 5%, 18%);
+  font-size: 2.3rem;
+  line-height: 1;
+}
+
+h2 {
+  color: hsl(14, 45%, 36%);
+  font-size: 1.75rem;
+}
+
+h3 {
+  color: hsl(332, 51%, 32%);
+  margin-bottom: 1rem;
+}
+
+p {
+  color: hsl(30, 10%, 34%);
+  margin-bottom: 1rem;
+}
+
+main > hr {
+  margin: 1.9rem;
+}
+
+hr {
+  opacity: 0.3;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+section {
+  margin: 2rem;
+}
+section .lists {
+  margin-left: 0.5rem;
+}
+section.ingredients .list, section.prep-time .list, section.instructions .list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.1rem;
+  color: hsl(30, 10%, 34%);
+  margin-bottom: 0.8rem;
+}
+section.ingredients .list .no, section.prep-time .list .no, section.instructions .list .no {
+  color: hsl(332, 51%, 32%);
+  font-weight: bold;
+  min-width: 15px;
+}
+section.ingredients .list .dot, section.prep-time .list .dot, section.instructions .list .dot {
+  min-width: 0.25rem;
+  min-height: 0.25rem;
+  border-radius: 50%;
+  background-color: hsl(332, 51%, 32%);
+}
+section.ingredients .list :nth-child(2), section.prep-time .list :nth-child(2), section.instructions .list :nth-child(2) {
+  margin-left: 0.7rem;
+}
+section.prep-time {
+  padding: 1.5rem;
+  background-color: hsl(330, 100%, 98%);
+  border-radius: 1rem;
+}
+section.instructions .list {
+  align-items: start;
+}
+section.instructions .list :nth-child(2) {
+  margin-left: 0;
+}
+section.nutrition table {
+  width: 100%;
+  border-collapse: collapse;
+}
+section.nutrition table tr td {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+section.nutrition table tr :first-child {
+  color: hsl(30, 10%, 34%);
+  padding-left: 2rem;
+}
+section.nutrition table tr :last-child {
+  color: hsl(14, 45%, 36%);
+  padding-right: 2.9rem;
+}
+section.nutrition table tr:last-child > td {
+  border-bottom: none;
 }/*# sourceMappingURL=style.css.map */
