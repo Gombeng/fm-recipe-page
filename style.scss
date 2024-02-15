@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap");
 
 $Mobile: 375px;
+$Tablet: 720px;
 $Desktop: 1440px;
 $Nutmeg: hsl(14, 45%, 36%);
 $Dark-Raspberry: hsl(332, 51%, 32%);
@@ -10,24 +11,50 @@ $Eggshell: hsl(30, 54%, 90%);
 $Wenge-Brown: hsl(30, 10%, 34%);
 $Dark-Charcoal: hsl(24, 5%, 18%);
 
+@mixin mediaQuery($breakpoint) {
+  @if ($breakpoint == minTablet) {
+    @media (min-width: $Tablet) {
+      @content;
+    }
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+html {
+  @include mediaQuery(minTablet) {
+    background-color: $Eggshell;
+  }
+}
+
 body {
   margin: 0 auto;
   font-size: 16px;
   line-height: 1.5;
-  max-width: $Desktop;
+  max-width: $Tablet;
   background-color: $White;
   font-family: "Outfit", sans-serif;
+
+  @include mediaQuery(minTablet) {
+    border-radius: 1.5rem;
+    margin: 7rem auto;
+  }
 }
 
 header {
   .header-image {
     width: 100%;
+    @include mediaQuery(minTablet) {
+      border-radius: 1rem;
+    }
+  }
+  @include mediaQuery(minTablet) {
+    margin: 2rem;
+    padding-top: 2rem;
   }
 }
 
@@ -35,7 +62,7 @@ h1,
 h2 {
   font-family: "Young Serif", serif;
   font-weight: 400;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 h1 {
@@ -59,12 +86,11 @@ p {
   margin-bottom: 1rem;
 }
 
-main > hr {
-  margin: 1.9rem;
-}
-
 hr {
   opacity: 0.3;
+}
+main > hr {
+  margin: 1.9rem;
 }
 
 .bold {
